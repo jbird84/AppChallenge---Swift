@@ -58,9 +58,30 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource {
     
         return cell
     }
+    //sets the view background to match the cell that was tapped.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let cell = colorsTableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
-        view.backgroundColor = cell.backgroundColor
+           switch indexPath.row {
+             case 0:
+                  view.backgroundColor = UIColor.red
+             case 1:
+                  view.backgroundColor = UIColor.black
+             case 2:
+                 view.backgroundColor = UIColor.blue
+             case 3:
+                 view.backgroundColor = UIColor.orange
+             case 4:
+                 view.backgroundColor = UIColor.brown
+             case 5:
+                 view.backgroundColor = UIColor.darkGray
+             case 6:
+                 view.backgroundColor = UIColor.green
+             case 7:
+                 view.backgroundColor = UIColor.magenta
+             case 8:
+                 view.backgroundColor = UIColor.purple
+             default:
+                 view.backgroundColor = view.backgroundColor
+             }
         tableView.reloadData()
     }
 }
